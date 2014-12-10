@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube API App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/yt-api.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+  <link rel="stylesheet" href="css/grid-listview.css" id="grid-listview-css">
+</head>
+<body>
+  <div data-role="page" data-theme="a" id="main-page" class="my-page" data-url="demo-page">
+    <div data-role="header">
+      <h1>Uploads</h1>
+    </div><!-- /header -->
+
+   <div data-role="content">
+
+     <div id="login-container" class="pre-auth">This application requires access to your YouTube account.
+         Please <a href="#" id="login-link">authorize</a> to continue.
+     </div>
+    <div id="video-totals">
+    </div>  		  
+
+    <div id="video-list">
+    </div>  		  
+  </div><!-- /content -->
+  <div id="button-container">
+  </div>
+
+  </div><!-- /page -->
+  <!-- Start of second page -->
+  <div data-role="page" data-theme="a" class="my-page" id="details">
+    <div data-role="header">
+      <h1>Video Details</h1>
+    </div><!-- /header -->
+    <div data-role="content">	
+		  <div id="player"></div>
+		  <!--
+		  <div data-role="collapsible" data-mini="true" class="ui-li-desc">
+			 <h3>Chart - Views per Day</h3>
+			 <div id="chart_div">
+			 </div>
+		  </div>
+		  -->
+		  <div data-role="collapsible" data-mini="true" class="ui-li-desc">
+			 <h3>Content ID</h3>
+			 <div id="contentid">
+			 </div>
+		  </div>
+
+		  <div data-role="collapsible" data-mini="true" class="ui-li-desc">
+			 <h3>Description</h3>
+			 <div id="description">
+			 </div>
+		  </div>	
+		  <div data-role="collapsible" data-mini="true" class="ui-li-desc">
+			 <h3>Details</h3>
+			   <div id="contentdetails">
+			 </div>
+		  </div>		
+		  <div data-role="collapsible" data-mini="true" class="ui-li-desc">
+			 <h3>Tags</h3>
+			 <textarea id="tags">
+			 </textarea>
+		  </div>
+		  <div data-role="collapsible" data-mini="true" class="ui-li-desc">
+			 <h3>Statistics</h3>
+			 <div id="statistics">
+			 </div>
+		  </div>
+		  <div data-role="collapsible" data-mini="true" class="ui-li-desc">
+			 <h3>Status</h3>
+			 <div id="status">
+			 </div>
+		  </div>
+      <div id="message"></div>	
+	  <a href="#main-page" data-role="button" data-inline="true" data-icon="arrow-l" data-iconpos="left">Upload List</a>	
+	</div><!-- /content -->
+  </div><!-- /page -->
+</body>
+</html>

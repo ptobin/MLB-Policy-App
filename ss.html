@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube API Launch App</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ss.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="css/launch.css" id="launch-css">
+  
+  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+</head>
+<body>
+  <div id="login-container" class="pre-auth">This application requires access to your YouTube account.
+	  Please <a href="#" id="login-link">authorize</a> to continue.
+  </div>  
+  <div id="message" ></div>
+  <div id="channel-container"></div>
+  <hr size=1>
+  <div>
+  <label> <p><button id="events-button" class="paging-button" disabled style="width:280px;" onClick="getEvents();"></button></p></label>
+  <div id="my-ytevents" class="events-list"></div>
+  
+  <label> <p><button id="events-ss-button" class="paging-button" disabled style="width:280px;" onClick="getSSEvents();"></button><input id="queryss" class="paging-button" value='0Aq3HoBrqezGPdF9STDZ3cTJ4cWc2c0tXdmxFQVVueUE' style="width:300px;" type="text"/></p></label>
+  <div id="my-spreadsheet" class="events-list"></div>
+  
+  <label> <p><button id="events-ss-insert-button" class="paging-button" disabled style="width:280px;" onClick="insertSSEvents();"></button></p></label>
+  <div id="inserted-events" class="events-list"></div> 
+  </div>
+  <div id="message" ></div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube API Launch App</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/launch.js"></script>
+  <script src="js/jquery.burn.min.js"></script>
+  <link rel="stylesheet" href="css/launch.css" id="launch-css">
+  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+</head>
+<body>
+  <div id="login-container" class="pre-auth">This application requires access to your YouTube account.
+	  Please <a href="#" id="login-link">authorize</a> to continue.
+  </div>  
+  <div id="message" class="burning"></div>
+  
+  <form id="buttons" action="javascript:search()">
+      <label> <input id="query" value='cats' type="text"/><button id="search-button" disabled >Search</button></label>
+  </form>
+    <div id="search-results-number"></div>
+  <label> <p><button id="uploads-button" disabled style="width:180px;" onClick="getUploads();">My Uploads</button></p></label>
+  <label> <p><button id="events-button" disabled style="width:180px;" onClick="getEvents();">List My YouTube Events</button></p></label>
+  <div id="my-ytevents"></div>
+  <label> <p><input id="queryss" value='0Aq3HoBrqezGPdF9STDZ3cTJ4cWc2c0tXdmxFQVVueUE' type="text"/><button id="events-ss-button" disabled style="width:80px;" onClick="getSSEvents();">List SS Id</button></p></label>
+  <div id="my-spreadsheet"></div>
+  <label> <p><button id="events-ss-insert-button" disabled style="width:180px;" onClick="insertSSEvents();">Insert My Spreadsheet Events</button></p></label>
+ 
+
+  <div id="video-message"></div>
+  <div id="video-container"></div>
+
+  <div class="button-container">
+      <button id="prev-button" class="paging-button" onclick="previousPage();">Previous Page</button>
+      <button id="next-button" class="paging-button" onclick="nextPage();">Next Page</button>
+  </div>
+</body>
+</html>

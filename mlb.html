@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MLB Uploads</title>
+  
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"> 
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+  <script src="js/auth.js"></script>
+  <script src="js/mlb.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"> 
+
+  <link rel="stylesheet" href="css/launch.css" id="launch-css">
+<!--   <link rel="stylesheet" href="css/jquery.dataTables.css"> -->
+    <link rel="stylesheet" href="css/demo_table_jui.css"> 
+  
+  
+  <script src="js/jquery.number.js"></script>
+  <script src="js/spin.js"></script>
+  <script src="js/jquery.spin.js"></script> 
+  <script src="js/jquery.dataTables.min.js"></script>  
+   
+   
+  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+</head>
+<body>
+  <div id="login-container" class="pre-auth">This application requires access to your YouTube account.
+	 
+	  	Please <a href="#" id="login-link">authorize</a> to continue.<br>
+		Behalf Of: <input id="behalfOf" type="text" value="mlbam"></input>
+	  
+  </div>  
+
+  <div id="header-container">
+	<div id="channel-container"></div>
+	<div id="input-container"><b>Configuration:</b>	
+		  <br><br><small>Look back <input id="myLookback" type="text" value="1"> days</small></input>
+		  <br><small>Auto Run&nbsp&nbsp&nbsp<input id="autorun" type="text" value="0"> mins</small></input><br>
+		  <br><br>
+	 </div>
+	 
+	 <div id="notifications"><b>Notifications:</b>
+	 	   <br><br><div id="message" ></div>
+	 	   <div id="policy-update" ></div>
+	 </div>
+
+	 <div id="actions"><b>Actions:</b>
+  		<br><br><button id="apply-policy-restrict" class="apply-button">Apply Policy "Apply mlb-2014-vod"</button>
+  		<br><br><button id="apply-policy-monetize" class="apply-button">Apply Policy "Monetize all countries"</button>
+	 
+	 </div>
+  </div>
+  <br><br><div id="autorun-message"></div>
+  <br><div id="table-container"> 
+<!--
+    <button id="checkall" class="checkall">Check All</button>
+
+	<input id="checkall" class="checkall" type="checkbox">Check all on page</input>
+-->	
+
+   	<table id="video-details" class="display"></table>
+  </div>
+
+  
+</div>
+
+</body>
+</html>
